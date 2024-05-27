@@ -53,11 +53,11 @@
   _    _    _    _    _    _    _    _    _    _    _    _    _          _    _    _
   _    _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _    _    _    _    _
   =    -    7    8    9    .    home pgdn pgup end  _    _    _    _     _    _    _    _    _    _    _
-  bspc del  4    5    6    0    left down up   rght _    _    _                         _    _    _
+  bspc del  4    @h5  @h6  0    left @hDn @hUp rght _    _    _                         _    _    _
   _    ,    1    2    3    ret  _    _    _    _    _    _                    _         _    _    _    _
   _    _    _              _                   _    _    _    _          _    _    _    _    _
 )
-
+%$@#@@#
 (defalias
   L1  (layer-toggle space) ;; Bind num to a button that switches to a layer
   spcL1 (tap-hold-next 400 spc @L1 )
@@ -71,4 +71,9 @@
   hk (tap-hold-next-release 200 k rsft)
   hl (tap-hold-next-release 200 l lalt)
   h; (tap-hold-next-release 200 ; rmet)
+
+  h5 (tap-hold-next-release 200 5 lsft)
+  h6 (tap-hold-next-release 200 6 lctl)
+  hUp (tap-hold-next-release 200 up lsft)
+  hDn (tap-hold-next-release 200 down lctl)
 )
