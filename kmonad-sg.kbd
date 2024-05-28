@@ -1,4 +1,5 @@
 ;; ."%appdata%\kmonad\kmonad-commt-4f4fe33.exe" "%appdata%\kmonad\kmonad-sg.kbd"
+;; & "$env:APPDATA\kmonad\kmonad-commt-4f4fe33.exe" "$env:APPDATA\kmonad\kmonad-sg.kbd"
 
 #| --------------------------------------------------------------------------
 
@@ -55,11 +56,21 @@
   =    -    7    8    9    .    home pgdn pgup end  _    _    _    _     _    _    _    _    _    _    _
   bspc del  4    @h5  @h6  0    left @hDn @hUp rght _    _    _                         _    _    _
   _    ,    1    2    3    ret  _    _    _    _    _    _                    _         _    _    _    _
+  _    _    @L2           _                   _    _    _    _          _    _    _    _    _
+)
+
+(deflayer nav
+  _    _    _    _    _    _    _    _    _    _    _    _    _          _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _     _    _    _    _    _    _    _
+  _    pgup up   pgdn _    _    _    _    _    _    _    _    _    _     _    _    _    _    _    _    _
+  home left down rght end  _    _    _    _    _    _    _    _                         _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _                    _         _    _    _    _
   _    _    _              _                   _    _    _    _          _    _    _    _    _
 )
 
 (defalias
-  L1  (layer-toggle space) ;; Bind num to a button that switches to a layer
+  L1  (layer-toggle space)
+  L2  (layer-toggle nav)
   spcL1 (tap-hold-next 400 spc @L1 )
   ha (tap-hold-next-release 200 a lmet)
   hs (tap-hold-next-release 200 s lalt)
