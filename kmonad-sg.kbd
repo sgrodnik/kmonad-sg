@@ -44,8 +44,8 @@
 (deflayer base
   esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12          ssrq  slck  pause
   grv   1     2     3     4     5     6     7     8     9     0     -     =     bspc   ins   home  pgup   nlck kp/  kp*  kp-
-  tab   @mq   w     e     r     t     y     u     i     o     p     [     ]     ret    del   end   pgdn   kp7  kp8  kp9  kp+
-  @cc   @ha   @hs   @hd   @hf   g     h     @hj   @hk   @hl   @h;   '     \                               kp4  kp5  kp6
+  tab   q     w     e     r     t     y     u     i     o     p     [     ]     ret    del   end   pgdn   kp7  kp8  kp9  kp+
+  @cc   @ha   @hs   @hd   @hf   @mg   h     @hj   @hk   @hl   @h;   '     \                               kp4  kp5  kp6
   lsft  z     x     c     v     b     n     m     ,     .     /     rsft                     up           kp1  kp2  kp3  kprt
   lctl  lmet  @L2               @spcL1                  ralt  rmet  cmp   rctl         left  down  rght   kp0  kp.
 )
@@ -53,7 +53,7 @@
 (deflayer space
   _     _     _     _     _     _     _     _     _     _     _     _     _            _     _     _
   _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _     _    _    _    _
-  =     -     7     8     9     .     home  pgdn  pgup  end   _     _     _     _      _     _     _     _    _    _    _
+  =     @mp   7     8     9     .     home  pgdn  pgup  end   _     _     _     _      _     _     _     _    _    _    _
   bspc  @hdel 4     @h5   @h6   0     left  @hDn  @hUp  rght  _     _     _                              _    _    _
   _     ,     1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
   _     _     lalt              _                       _     _     _     _             _    _     _     _    _
@@ -89,6 +89,7 @@
   hUp (tap-hold-next-release 200 up lsft)
   hDn (tap-hold-next-release 200 down lctl)
 
-  eesc #(esc esc)
-  mq  (multi-tap 200 q @eesc)
+  desc #(esc esc)
+  mg  (multi-tap 200 g @desc)
+  mp  (multi-tap 200 - +)
 )
