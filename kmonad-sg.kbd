@@ -51,10 +51,10 @@
 )
 
 (deflayer space
-  _     _     _     _     _     _     _     _     _     _     _     _     _            _     _     _
-  _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _     _    _    _    _
+  @clr  _     _     _     _     _     _     _     _     _     _     _     _            _     _     _
+  _     vold  volu  _     _     pp    next  _     _     _     _     _     _     _      _     _     _     _    _    _    _
   =     @mp   7     8     9     .     home  pgdn  pgup  end   _     _     _     _      _     _     _     _    _    _    _
-  bspc  @hdel 4     @h5   @h6   0     left  @hDn  @hUp  rght  _     _     _                              _    _    _
+  del   @hb   4     @h5   @h6   0     left  @hDn  @hUp  rght  _     _     _                              _    _    _
   _     ,     1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
   _     _     lalt              _                       _     _     _     _             _    _     _     _    _
 )
@@ -83,7 +83,7 @@
   hl (tap-hold-next-release 200 l lalt)
   h; (tap-hold-next-release 200 ; rmet)
 
-  hdel (tap-hold-next-release 200 del lmet)
+  hb (tap-hold-next-release 200 bspc lmet)
   h5 (tap-hold-next-release 200 5 lsft)
   h6 (tap-hold-next-release 200 6 lctl)
   hUp (tap-hold-next-release 200 up lsft)
@@ -92,4 +92,6 @@
   desc #(esc esc)
   mg  (multi-tap 200 g @desc)
   mp  (multi-tap 200 - +)
+
+  clr (around ralt (around rsft (around rctl (around lmet (around lalt (around lsft lctl))))))
 )
