@@ -17,7 +17,7 @@
   is yet another valid name for that key.
 
 (deflayer name
-  _     _     _     _     _     _     _     _     _     _     _     _     _            _     _     _
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _
   _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _    _    _    _    _
   _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _    _    _    _    _
   _     _     _     _     _     _     _     _     _     _     _     _     _                             _    _    _
@@ -33,7 +33,7 @@
 )
 
 (defsrc
-  esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12          ssrq  slck  pause
+  esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12   prnt   ssrq  slck  pause
   grv   1     2     3     4     5     6     7     8     9     0     -     =     bspc   ins   home  pgup   nlck kp/  kp*  kp-
   tab   q     w     e     r     t     y     u     i     o     p     [     ]     ret    del   end   pgdn   kp7  kp8  kp9  kp+
   caps  a     s     d     f     g     h     j     k     l     ;     '     \                               kp4  kp5  kp6
@@ -42,7 +42,7 @@
 )
 
 (deflayer base
-  esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12          ssrq  slck  pause
+  esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12   prnt   ssrq  slck  pause
   grv   1     2     3     4     5     6     7     8     9     0     -     =     bspc   ins   home  pgup   nlck kp/  kp*  kp-
   tab   q     w     e     r     t     y     u     i     o     p     [     ]     ret    del   end   pgdn   kp7  kp8  kp9  kp+
   @cc   @ha   @hs   @hd   @hf   @mg   h     @hj   @hk   @hl   @h;   '     \                               kp4  kp5  kp6
@@ -51,16 +51,16 @@
 )
 
 (deflayer space
-  @clr  _     _     _     _     _     _     _     _     _     _     _     _            _     _     _
+  @clr  _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _
   _     vold  volu  _     _     pp    next  _     _     _     _     _     _     _      _     _     _     _    _    _    _
-  =     @mp   7     8     9     .     home  pgdn  pgup  end   _     _     _     _      _     _     _     _    _    _    _
+  =     @mp   7     8     9     .     home  pgdn  pgup  end   prnt  _     _     _      _     _     _     _    _    _    _
   del   @hb   4     @h5   @h6   0     left  @hDn  @hUp  rght  _     _     _                              _    _    _
   _     ,     1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
   _     _     lalt              _                       _     _     _     _             _    _     _     _    _
 )
 
 (deflayer nav
-  _     _     _     _     _     _     _     _     _     _     _     _     _            _     _     _
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _
   _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _    _    _    _    _
   _     pgup  up    pgdn  _     _     _     _     _     _     _     _     _     _      _     _     _    _    _    _    _
   home  left  down  rght  end   _     _     _     _     _     _     _     _                             _    _    _
