@@ -45,17 +45,17 @@
   esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12   prnt   ssrq  slck  pause
   grv   1     2     3     4     5     6     7     8     9     0     -     =     bspc   ins   home  pgup   nlck kp/  kp*  kp-
   @tbL2 q     w     e     r     t     y     u     i     o     p     [     ]     ret    del   end   pgdn   kp7  kp8  kp9  kp+
-  @cc   @ha   @hs   @hd   @hf   @mg   h     @hj   @hk   @hl   @h;   '     \                               kp4  kp5  kp6
+  @cc   @ha   @hs   @hd   @hf   g     h     @hj   @hk   @hl   @h;   '     \                               kp4  kp5  kp6
   lsft  z     x     c     v     b     n     m     ,     .     /     rsft                     up           kp1  kp2  kp3  kprt
   lctl  lmet  @L2               @spcL1                  ralt  rmet  cmp   rctl         left  down  rght   kp0  kp.
 )
 
 (deflayer space
   @clr  _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _
-  _     vold  volu  _     _     pp    next  _     _     _     _     _     _     _      _     _     _     _    _    _    _
-  =     @mp   7     8     9     .     home  pgdn  pgup  end   prnt  _     _     _      _     _     _     _    _    _    _
+  _     vold  volu  _     @dq   pp    next  _     _     _     _     _     _     _      _     _     _     _    _    _    _
+  =     @mp   7     8     9     esc   home  pgdn  pgup  end   prnt  _     _     _      _     _     _     _    _    _    _
   del   @hb   4     @h5   @h6   0     left  @hDn  @hUp  rght  _     _     _                              _    _    _
-  _     ,     1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
+  _     @cd   1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
   _     _     lalt              _                       _     _     _     _             _    _     _     _    _
 )
 
@@ -91,8 +91,10 @@
   hDn (tap-hold-next-release 200 down lctl)
 
   desc #(esc esc)
-  mg  (multi-tap 200 g @desc)
+  ;; mg  (multi-tap 200 g @desc)
   mp  (multi-tap 200 - +)
+  cd  (multi-tap 200 . ,)
+  dq  (multi-tap 200 " ')
 
   clr (around ralt (around rsft (around rctl (around lmet (around lalt (around lsft lctl))))))
 )
