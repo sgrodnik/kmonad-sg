@@ -30,6 +30,7 @@
 (defcfg
   input (low-level-hook)
   output (send-event-sink 500 10)
+  fallthrough true
 )
 
 (defsrc
@@ -82,13 +83,13 @@
 (defalias
   L1  (layer-toggle space)
   L2  (layer-toggle nav)
-  spcL1 (tap-hold-next 400 spc @L1 )
-  tbL2 (tap-hold-next 400 tab @L2 )
-  ha (tap-hold-next 200 a lmet)
-  hs (tap-hold-next 200 s lalt)
-  hd (tap-hold-next 200 d lsft)
-  hf (tap-hold-next 200 f lctl)
-  cc (tap-hold-next 200 caps lctl)
+  spcL1 (tap-hold-next 400 spc  @L1  :timeout-button spc)
+  tbL2  (tap-hold-next 400 tab  @L2  :timeout-button tab)
+  ha (tap-hold-next-release 200 a lmet)
+  hs (tap-hold-next-release 200 s lalt)
+  hd (tap-hold-next-release 200 d lsft)
+  hf (tap-hold-next-release 200 f lctl)
+  cc (tap-hold-next-release 200 caps lctl)
 
   hj (tap-hold-next-release 200 j rctl)
   hk (tap-hold-next-release 200 k rsft)
