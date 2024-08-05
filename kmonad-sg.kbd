@@ -56,7 +56,7 @@
   _     vold  volu  _     @dq   pp    next  _     _     _     _     _     _     _      _     _     _     _    _    _    _
   =     @mp   7     8     9     esc   home  pgdn  pgup  end   prnt  _     _     _      _     _     _     _    _    _    _
   del   @hb   4     @h5   @h6   0     left  @hDn  @hUp  rght  _     _     _                              _    _    _
-  _     @cd   1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
+  esc   @cd   1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
   _     _     _                 _                       _     _     _     _             _    _     _     _    _
 )
 
@@ -66,7 +66,7 @@
   _     vold  volu  _     '     pp    next  _     _     _     _     _     _     _      _     _     _     _    _    _    _
   =     -+    7     8     9     esc   home  pgdn  pgup  end   prnt  _     _     _      _     _     _     _    _    _    _
   del   bspc  4     5     6     0     left  @hDn  @hUp  rght  _     _     _                              _    _    _
-  _     ,.    1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
+  esc   ,.    1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
   _     _     _                 _                       _     _     _     _             _    _     _     _    _
 )
   -------------------------------------------------------------------------- |#
