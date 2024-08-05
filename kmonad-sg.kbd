@@ -77,7 +77,7 @@
   _     pgup  up    pgdn  _     _     _     _     _     _     _     _     _     _      _     _     _    _    _    _    _
   home  left  down  rght  end   _     _     _     _     _     _     _     _                             _    _    _
   _     _     _     _     _     _     _     _     _     _     _     _                        _          _    _    _    _
-  _     _     _                 ent                     _     _     _     _            _     _     _    _    _
+  _     _     _                 spc                     _     _     _     _            _     _     _    _    _
 )
 
 (defalias
