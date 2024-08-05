@@ -48,7 +48,7 @@
   @tbL2 q     w     e     r     t     y     u     i     o     p     [     ]     ret    del   end   pgdn   kp7  kp8  kp9  kp+
   @cc   @ha   @hs   @hd   @hf   g     h     @hj   @hk   @hl   @h;   '     \                               kp4  kp5  kp6
   lsft  z     x     c     v     b     n     m     ,     .     /     rsft                     up           kp1  kp2  kp3  kprt
-  lctl  lmet  lalt              @spcL1                  ralt  rmet  cmp   rctl         left  down  rght   kp0  kp.
+  lctl  lmet  @aesc             @spcL1                  ralt  rmet  cmp   rctl         left  down  rght   kp0  kp.
 )
 
 (deflayer space
@@ -90,6 +90,7 @@
   hd (tap-hold-next-release 200 d lsft)
   hf (tap-hold-next-release 200 f lctl)
   cc (tap-hold-next-release 200 caps @L2)
+  aesc (tap-hold-next-release 200 esc lalt)
 
   hj (tap-hold-next-release 200 j rctl)
   hk (tap-hold-next-release 200 k rsft)
