@@ -1,4 +1,5 @@
 ;; ."%appdata%\kmonad\kmonad-commt-4f4fe33.exe" "%appdata%\kmonad\kmonad-sg.kbd"
+;; & C:\Users\1M06174\AppData\Roaming\kmonad\KmonadRestart.ps1 stop
 ;; & "$env:APPDATA\kmonad\kmonad-commt-4f4fe33.exe" "$env:APPDATA\kmonad\kmonad-sg.kbd"
 
 #| --------------------------------------------------------------------------
@@ -29,7 +30,7 @@
 
 (defcfg
   input (low-level-hook)
-  output (send-event-sink 500 10)
+  output (send-event-sink 900 30)
   fallthrough true
 )
 
@@ -45,10 +46,10 @@
 (deflayer base
   esc   f1    f2    f3    f4    f5    f6    f7    f8    f9    f10   f11   f12   prnt   ssrq  slck  pause
   grv   1     2     3     4     5     6     7     8     9     0     -     =     bspc   ins   home  pgup   nlck kp/  kp*  kp-
-  @tbL2 q     w     e     r     t     y     u     i     o     p     [     ]     ret    del   end   pgdn   kp7  kp8  kp9  kp+
+  @tbL2 @qL4  w     @he   r     t     y     u     i     o     p     [     ]     ret    del   end   pgdn   kp7  kp8  kp9  kp+
   @cc   @ha   @hs   @hd   @hf   g     h     @hj   @hk   @hl   @h;   '     \                               kp4  kp5  kp6
-  lsft  z     x     c     v     b     n     m     ,     .     /     rsft                     up           kp1  kp2  kp3  kprt
-  lctl  lmet  @aesc             @spcL1                  ralt  rmet  cmp   rctl         left  down  rght   kp0  kp.
+  lsft  @zL3  x     c     v     b     n     m     ,     .     /     rsft                     up           kp1  kp2  kp3  kprt
+  lctl  lmet  lalt             @spcL1                  ralt  rmet  cmp   rctl         left  down  rght   kp0  kp.
 )
 
 (deflayer space
@@ -58,6 +59,24 @@
   del   @hb   4     @h5   @h6   0     left  @hDn  @hUp  rght  _     _     _                              _    _    _
   esc   @cd   1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
   _     _     _                 _                       _     _     _     _             _    _     _     _    _
+)
+
+(deflayer zlayer
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _    _    _    _    _
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _    _    _    _    _
+  _     _     esc   bspc  ret   _     _     _     _     _     _     _     _                             _    _    _
+  _     _     esc   bspc  ret   _     _     _     _     _     _     _                        _          _    _    _    _
+  _     _     _                 _                       _     _     _     _            _     _     _    _    _
+)
+
+(deflayer qlayer
+  _     _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _
+  _     _     f10   f11   f12   _     _     _     _     _     _     _     _     _      _     _     _    _    _    _    _
+  _     _     f7    f8    f9    _     _     _     _     _     _     _     _     _      _     _     _    _    _    _    _
+  _     _     f4    f5    f6    _     _     _     _     _     _     _     _                             _    _    _
+  _     _     f1    f2    f3    _     _     _     _     _     _     _                        _          _    _    _    _
+  _     _     _                 _                       _     _     _     _            _     _     _    _    _
 )
 
 #| --------------------------------------------------------------------------
@@ -83,14 +102,19 @@
 (defalias
   L1  (layer-toggle space)
   L2  (layer-toggle nav)
-  spcL1 (tap-hold-next 400 spc  @L1  :timeout-button spc)
+  spcL1 (tap-hold-next-release 800 spc  @L1  :timeout-button spc)
   tbL2  (tap-hold-next 400 tab  @L2  :timeout-button tab)
+  L3  (layer-toggle zlayer)
+  zL3 (tap-hold-next-release 200 z @L3)
+  L4  (layer-toggle qlayer)
+  qL4 (tap-hold-next-release 200 q @L4)
   ha (tap-hold-next-release 200 a lmet)
   hs (tap-hold-next-release 200 s lalt)
   hd (tap-hold-next-release 200 d lsft)
   hf (tap-hold-next-release 200 f lctl)
-  cc (tap-hold-next-release 200 caps @L2)
-  aesc (tap-hold-next-release 200 esc lalt)
+  he (tap-hold-next-release 200 e lctl)
+  cc (tap-hold-next-release 200 F24 @L2)
+  ;; aesc (tap-hold-next-release 200 esc lalt)
 
   hj (tap-hold-next-release 200 j rctl)
   hk (tap-hold-next-release 200 k rsft)
