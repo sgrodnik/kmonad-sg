@@ -55,8 +55,8 @@
 (deflayer space
   @clr  _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _
   _     vold  volu  _     @dq   pp    next  _     _     _     _     _     _     _      _     _     _     _    _    _    _
-  =     @mp   7     8     9     esc   home  pgdn  pgup  end   prnt  _     _     _      _     _     _     _    _    _    _
-  del   @hb   4     @h5   @h6   0     left  @hDn  @hUp  rght  _     _     _                              _    _    _
+  =     @mp   7     8     9     esc   _     pgup  up    pgdn  prnt  _     _     _      _     _     _     _    _    _    _
+  del   @hb   4     @h5   @h6   0     home  left  down  rght  end   _     _                              _    _    _
   esc   @cd   1     2     3     ret   _     _     _     _     _     _                        _           _    _    _    _
   _     _     _                 _                       _     _     _     _             _    _     _     _    _
 )
@@ -79,7 +79,7 @@
   _     _     _                 _                       _     _     _     _            _     _     _    _    _
 )
 
-#| --------------------------------------------------------------------------
+#| -------------------------------------------------------------------------- OUTDATED, fixme
 (deflayer spaceLegend
   @clr  _     _     _     _     _     _     _     _     _     _     _     _     _      _     _     _
   _     vold  volu  _     '     pp    next  _     _     _     _     _     _     _      _     _     _     _    _    _    _
